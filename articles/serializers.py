@@ -6,7 +6,7 @@ class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Article
         fields = '__all__'
-        read_only = ['author']
+        read_only_fields = ['author', 'created_at', 'updated_at', 'status']
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
